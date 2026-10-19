@@ -22,15 +22,6 @@
                     },
                     colors: {
                         darkbg: '#0b0f19',
-                        // Palettes spécifiques pour chaque univers
-                        bitoCyan: '#06b6d4',
-                        bitoGreen: '#10b981',
-                        devineBlue: '#2563eb',
-                        devineGreen: '#059669',
-                        kkkIndigo: '#6366f1',
-                        kkkPurple: '#a855f7',
-                        gesteOrange: '#f97316',
-                        gesteRed: '#e11d48',
                     }
                 }
             }
@@ -44,15 +35,17 @@
             touch-action: manipulation;
         }
 
-        /* 1. Ombres 3D Bitoguessr */
+        /* --- Ombres 3D physiques et états de pression (:active) --- */
+        
+        /* 1. Bitoguessr (Cyan / Vert) */
         .btn-3d-bito {
-            box-shadow: 0 8px 0px #047857, 0 16px 25px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 8px 0px #065f46, 0 16px 25px rgba(0, 0, 0, 0.45);
         }
         .btn-3d-bito:active {
-            box-shadow: 0 0px 0px #047857, 0 4px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0px 0px #065f46, 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
-        /* 2. Ombres 3D Devinettes */
+        /* 2. Devinettes (Bleu / Émeraude) */
         .btn-3d-devine {
             box-shadow: 0 8px 0px #047857, 0 16px 25px rgba(0, 0, 0, 0.45);
         }
@@ -60,7 +53,7 @@
             box-shadow: 0 0px 0px #047857, 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
-        /* 3. Ombres 3D Fantôme ou KKK */
+        /* 3. Fantôme ou KKK (Indigo / Violet) */
         .btn-3d-kkk {
             box-shadow: 0 8px 0px #4338ca, 0 16px 25px rgba(0, 0, 0, 0.45);
         }
@@ -68,7 +61,7 @@
             box-shadow: 0 0px 0px #4338ca, 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
-        /* 4. Ombres 3D Ne Fais Pas Le Geste */
+        /* 4. Ne fais pas le geste (Orange / Rouge) */
         .btn-3d-geste {
             box-shadow: 0 8px 0px #9f1239, 0 16px 25px rgba(0, 0, 0, 0.45);
         }
@@ -76,7 +69,7 @@
             box-shadow: 0 0px 0px #9f1239, 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
-        /* 5. Ombres 3D Super U */
+        /* 5. Super U (Bleu Roi / Carmin) */
         .btn-3d-superu {
             box-shadow: 0 8px 0px #1e3a8a, 0 16px 25px rgba(0, 0, 0, 0.45);
         }
@@ -84,22 +77,66 @@
             box-shadow: 0 0px 0px #1e3a8a, 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
-        /* Cases stylisées pour devine le mot */
+        /* 6. Thème Scindé : Pride & Camouflage Militaire */
+        .btn-3d-tactical {
+            box-shadow: 0 8px 0px #27272a, 0 16px 25px rgba(0, 0, 0, 0.6);
+        }
+        .btn-3d-tactical:active {
+            box-shadow: 0 0px 0px #27272a, 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Drapeau Pride en dégradé franc */
+        .pride-stripes {
+            background: linear-gradient(to bottom, 
+                #ef4444 0%, #ef4444 16.6%, 
+                #f97316 16.6%, #f97316 33.3%, 
+                #eab308 33.3%, #eab308 50%, 
+                #22c55e 50%, #22c55e 66.6%, 
+                #3b82f6 66.6%, #3b82f6 83.3%, 
+                #8b5cf6 83.3%, #8b5cf6 100%
+            );
+        }
+
+        /* Motif Camouflage Kaki Militaire généré en CSS pur */
+        .camo-military {
+            background-color: #2e3a24;
+            background-image: 
+                radial-gradient(ellipse at 25% 30%, #4a5c31 0%, #4a5c31 35%, transparent 36%),
+                radial-gradient(ellipse at 75% 70%, #1c2415 0%, #1c2415 40%, transparent 41%),
+                radial-gradient(ellipse at 70% 20%, #3f4e2c 0%, #3f4e2c 30%, transparent 31%),
+                radial-gradient(ellipse at 30% 80%, #586b3a 0%, #586b3a 35%, transparent 36%),
+                radial-gradient(circle at 50% 50%, #181f12 0%, #181f12 25%, transparent 26%);
+            background-size: 130px 130px;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 4px 14px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 1);
+        }
+
+        .rainbow-border {
+            background: linear-gradient(135deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #a855f7);
+            padding: 2px;
+        }
+
+        /* Éléments graphiques texturés */
         .letter-box {
             box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.25), 0 4px 8px rgba(0, 0, 0, 0.35);
         }
 
-        /* Badge logo U stylisé */
         .u-logo-box {
             box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.4), 0 6px 14px rgba(0, 0, 0, 0.35);
         }
+
+        .neon-pill {
+            box-shadow: 0 0 15px rgba(217, 70, 239, 0.4);
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-between p-5 sm:p-8 text-gray-100 selection:bg-indigo-500 selection:text-white">
+<body class="min-h-screen flex flex-col items-center justify-between p-5 sm:p-8 text-gray-100 selection:bg-fuchsia-500 selection:text-white">
 
     <!-- En-tête -->
     <header class="text-center pt-2 sm:pt-4 mb-8 max-w-2xl">
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 mb-4 rounded-full bg-gray-800/60 border border-gray-700/80 text-xs font-bold tracking-widest text-gray-300 uppercase backdrop-blur-md shadow-inner">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 mb-4 rounded-full bg-gray-800/70 border border-gray-700/80 text-xs font-bold tracking-widest text-gray-300 uppercase backdrop-blur-md shadow-inner">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
             Arcade & Quiz Hub
         </div>
@@ -108,18 +145,23 @@
             Choisis ton Défi
         </h1>
         <p class="text-base sm:text-lg text-gray-400 font-medium max-w-lg mx-auto leading-relaxed">
-            Sélectionne l'une des 5 aventures interactives ci-dessous pour lancer une partie.
+            6 expériences uniques à portée de clic. Sélectionne ton jeu et montre ce que tu as dans le ventre !
         </p>
     </header>
 
-    <!-- Grille responsive des 5 Jeux -->
-    <main class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-7 my-auto">
+    <!-- Grille des 6 Jeux (1 col mobile, 2 cols tablette, 3 cols grand écran) -->
+    <main class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 my-auto">
         
-        <!-- CARTE 1 : Bitoguessr (lg: 3 colonnes) -->
+        <!-- JEU 1 : Bitoguessr -->
         <a href="https://bitoguessr.pages.dev/" target="_blank" rel="noopener noreferrer" 
-           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-cyan-500/40 lg:col-span-3">
-            <div class="h-full bg-gradient-to-br from-cyan-600 via-teal-600 to-emerald-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-bito border border-white/20 relative overflow-hidden">
+           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-cyan-500/40">
+            <div class="h-full bg-gradient-to-br from-cyan-600 via-teal-600 to-emerald-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-bito border border-white/20 relative overflow-hidden min-h-[300px]">
                 <div class="absolute -top-10 -right-10 w-36 h-36 bg-white/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-300"></div>
+
+                <div class="w-full flex justify-between items-center relative z-10 text-xs font-bold text-cyan-200 uppercase tracking-wider">
+                    <span class="px-3 py-1 rounded-full bg-black/20 backdrop-blur-sm border border-white/10">Exploration</span>
+                    <span>#01</span>
+                </div>
 
                 <div class="relative z-10 my-4 flex items-center justify-center gap-3">
                     <span class="text-4xl sm:text-5xl transform -rotate-12 transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-0 drop-shadow-[0_8px_12px_rgba(0,0,0,0.4)]">
@@ -133,7 +175,7 @@
                     </span>
                 </div>
 
-                <div class="relative z-10 mt-2">
+                <div class="relative z-10 w-full mt-2">
                     <div class="flex items-center justify-center gap-2 mb-1.5">
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-md">
                             Bitoguessr
@@ -142,18 +184,23 @@
                             →
                         </span>
                     </div>
-                    <p class="text-cyan-100/90 text-sm sm:text-base font-medium">
+                    <p class="text-cyan-100/90 text-sm font-medium">
                         Explore la carte et devine l'endroit !
                     </p>
                 </div>
             </div>
         </a>
 
-        <!-- CARTE 2 : Jeu de Devinettes (lg: 3 colonnes) -->
+        <!-- JEU 2 : Jeu de Devinettes -->
         <a href="https://devinette.pages.dev/" target="_blank" rel="noopener noreferrer" 
-           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-blue-500/40 lg:col-span-3">
-            <div class="h-full bg-gradient-to-br from-blue-600 via-blue-700 to-emerald-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-devine border border-white/20 relative overflow-hidden">
+           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-blue-500/40">
+            <div class="h-full bg-gradient-to-br from-blue-600 via-blue-700 to-emerald-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-devine border border-white/20 relative overflow-hidden min-h-[300px]">
                 <div class="absolute -top-10 -right-10 w-36 h-36 bg-white/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-300"></div>
+
+                <div class="w-full flex justify-between items-center relative z-10 text-xs font-bold text-blue-200 uppercase tracking-wider">
+                    <span class="px-3 py-1 rounded-full bg-black/20 backdrop-blur-sm border border-white/10">Vocabulaire</span>
+                    <span>#02</span>
+                </div>
 
                 <div class="flex gap-2 sm:gap-3 my-4 relative z-10">
                     <div class="letter-box w-11 h-13 sm:w-13 sm:h-16 bg-white/20 border-2 border-white/40 rounded-xl flex items-center justify-center text-white font-extrabold text-2xl sm:text-3xl backdrop-blur-md transform -rotate-6 transition-transform group-hover:-rotate-12">
@@ -167,7 +214,7 @@
                     </div>
                 </div>
 
-                <div class="relative z-10 mt-2">
+                <div class="relative z-10 w-full mt-2">
                     <div class="flex items-center justify-center gap-2 mb-1.5">
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-md">
                             Devinettes
@@ -176,18 +223,23 @@
                             →
                         </span>
                     </div>
-                    <p class="text-blue-100/90 text-sm sm:text-base font-medium">
+                    <p class="text-blue-100/90 text-sm font-medium">
                         Trouve le mot caché et bats le chrono !
                     </p>
                 </div>
             </div>
         </a>
 
-        <!-- CARTE 3 : Fantôme ou KKK (lg: 2 colonnes) -->
+        <!-- JEU 3 : Fantôme ou KKK -->
         <a href="https://fantome-ou-kkk.pages.dev/" target="_blank" rel="noopener noreferrer" 
-           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-purple-500/40 lg:col-span-2">
-            <div class="h-full bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-kkk border border-white/20 relative overflow-hidden">
+           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-purple-500/40">
+            <div class="h-full bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-kkk border border-white/20 relative overflow-hidden min-h-[300px]">
                 <div class="absolute -bottom-10 -left-10 w-36 h-36 bg-purple-400/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-300"></div>
+
+                <div class="w-full flex justify-between items-center relative z-10 text-xs font-bold text-indigo-200 uppercase tracking-wider">
+                    <span class="px-3 py-1 rounded-full bg-black/20 backdrop-blur-sm border border-white/10">Observation</span>
+                    <span>#03</span>
+                </div>
 
                 <div class="flex items-center justify-center gap-3 sm:gap-4 my-4 relative z-10">
                     <span class="text-4xl sm:text-5xl drop-shadow-[0_0_18px_rgba(255,255,255,0.7)] transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12">
@@ -201,7 +253,7 @@
                     </span>
                 </div>
 
-                <div class="relative z-10 mt-2">
+                <div class="relative z-10 w-full mt-2">
                     <div class="flex items-center justify-center gap-2 mb-1.5">
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-md">
                             Fantôme ou KKK
@@ -210,18 +262,23 @@
                             →
                         </span>
                     </div>
-                    <p class="text-indigo-100/90 text-sm sm:text-base font-medium">
-                        Teste ton sens de l'observation !
+                    <p class="text-indigo-100/90 text-sm font-medium">
+                        Distingue l'illusion sans hésiter !
                     </p>
                 </div>
             </div>
         </a>
 
-        <!-- CARTE 4 : Ne fais pas le geste (lg: 2 colonnes) -->
+        <!-- JEU 4 : Ne fais pas le geste -->
         <a href="https://ne-fait-pas-le-geste.pages.dev/" target="_blank" rel="noopener noreferrer" 
-           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-rose-500/40 lg:col-span-2">
-            <div class="h-full bg-gradient-to-br from-orange-500 via-rose-600 to-red-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-geste border border-white/20 relative overflow-hidden">
+           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-rose-500/40">
+            <div class="h-full bg-gradient-to-br from-amber-500 via-orange-600 to-rose-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-geste border border-white/20 relative overflow-hidden min-h-[300px]">
                 <div class="absolute -bottom-10 -right-10 w-36 h-36 bg-orange-400/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-300"></div>
+
+                <div class="w-full flex justify-between items-center relative z-10 text-xs font-bold text-orange-200 uppercase tracking-wider">
+                    <span class="px-3 py-1 rounded-full bg-black/20 backdrop-blur-sm border border-white/10">Réflexes</span>
+                    <span>#04</span>
+                </div>
 
                 <div class="flex items-center justify-center gap-3 sm:gap-4 my-4 relative z-10">
                     <span class="text-4xl sm:text-5xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] transform -rotate-12 transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-0">
@@ -235,7 +292,7 @@
                     </span>
                 </div>
 
-                <div class="relative z-10 mt-2">
+                <div class="relative z-10 w-full mt-2">
                     <div class="flex items-center justify-center gap-2 mb-1.5">
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-md">
                             Ne fais pas le geste
@@ -244,20 +301,24 @@
                             →
                         </span>
                     </div>
-                    <p class="text-rose-100/90 text-sm sm:text-base font-medium">
-                        Résiste aux pièges et réflexes !
+                    <p class="text-rose-100/90 text-sm font-medium">
+                        Contrôle ton corps et évite le piège !
                     </p>
                 </div>
             </div>
         </a>
 
-        <!-- CARTE 5 : Super U (lg: 2 colonnes / sm: pleine largeur) -->
+        <!-- JEU 5 : Super U -->
         <a href="https://super-u.pages.dev/" target="_blank" rel="noopener noreferrer" 
-           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-blue-400/40 sm:col-span-2 lg:col-span-2">
-            <div class="h-full bg-gradient-to-br from-blue-700 via-indigo-800 to-rose-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-superu border border-white/20 relative overflow-hidden">
+           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-blue-400/40">
+            <div class="h-full bg-gradient-to-br from-blue-700 via-indigo-800 to-rose-600 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-superu border border-white/20 relative overflow-hidden min-h-[300px]">
                 <div class="absolute -top-10 -right-10 w-36 h-36 bg-blue-400/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-300"></div>
 
-                <!-- Visuel : Caddie + Logo U 3D + Rayon courses -->
+                <div class="w-full flex justify-between items-center relative z-10 text-xs font-bold text-blue-200 uppercase tracking-wider">
+                    <span class="px-3 py-1 rounded-full bg-black/20 backdrop-blur-sm border border-white/10">Challenge</span>
+                    <span>#05</span>
+                </div>
+
                 <div class="flex items-center justify-center gap-3 sm:gap-4 my-4 relative z-10">
                     <span class="text-4xl sm:text-5xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] transform -rotate-6 transition-transform duration-300 group-hover:scale-110 group-hover:-translate-x-1">
                         🛒
@@ -270,7 +331,7 @@
                     </span>
                 </div>
 
-                <div class="relative z-10 mt-2">
+                <div class="relative z-10 w-full mt-2">
                     <div class="flex items-center justify-center gap-2 mb-1.5">
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-md">
                             Super U
@@ -279,8 +340,65 @@
                             →
                         </span>
                     </div>
-                    <p class="text-blue-100/90 text-sm sm:text-base font-medium">
+                    <p class="text-blue-100/90 text-sm font-medium">
                         Défi courses et challenge en magasin !
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <!-- JEU 6 : Carte Double Identité (Pride / Camouflage Militaire) -->
+        <a href="https://gaa-gustap0.pages.dev/" target="_blank" rel="noopener noreferrer" 
+           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-emerald-500/40">
+            <div class="h-full rounded-[28px] flex flex-col justify-between text-center btn-3d-tactical relative overflow-hidden min-h-[300px] border border-white/20">
+                
+                <!-- Fond scindé : Moitié gauche Pride / Moitié droite Camouflage Militaire -->
+                <div class="absolute inset-0 flex pointer-events-none">
+                    <!-- Côté Gauche : Couleurs Pride -->
+                    <div class="w-1/2 h-full pride-stripes relative">
+                        <div class="absolute inset-0 bg-black/15"></div>
+                    </div>
+                    <!-- Ligne de scission dynamique -->
+                    <div class="w-[2px] h-full bg-white/40 shadow-[0_0_10px_rgba(255,255,255,0.7)] z-10"></div>
+                    <!-- Côté Droit : Camouflage Militaire Kaki -->
+                    <div class="w-1/2 h-full camo-military relative">
+                        <div class="absolute inset-0 bg-black/25"></div>
+                    </div>
+                </div>
+
+                <!-- En-tête de carte -->
+                <div class="w-full flex justify-between items-center p-6 pb-2 relative z-20 text-xs font-bold uppercase tracking-wider">
+                    <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-md">
+                        Dualité
+                    </span>
+                    <span class="px-2 py-0.5 rounded bg-black/50 text-white/90 font-mono">#06</span>
+                </div>
+
+                <!-- Visuel central : Alliance des deux univers -->
+                <div class="flex items-center justify-center gap-3 sm:gap-4 my-2 relative z-20">
+                    <span class="text-4xl sm:text-5xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] transform -rotate-12 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-0">
+                        🏳️‍🌈
+                    </span>
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/60 backdrop-blur-md border border-white/30 flex items-center justify-center text-lg sm:text-xl text-white font-black shadow-lg">
+                        ⚡
+                    </div>
+                    <span class="text-4xl sm:text-5xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] transform rotate-12 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-0">
+                        🪖
+                    </span>
+                </div>
+
+                <!-- Titre & Action (sans encadré, directement posé sur le fond scindé) -->
+                <div class="relative z-20 w-full p-6 pt-1 flex flex-col items-center justify-center">
+                    <div class="flex items-center justify-center gap-2 mb-1">
+                        <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight text-shadow-strong">
+                            GAY ou GESTAPO
+                        </h2>
+                        <span class="text-white text-lg opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-shadow-strong">
+                            →
+                        </span>
+                    </div>
+                    <p class="text-white text-xs sm:text-sm font-semibold text-shadow-strong opacity-95">
+                        Fais ton choix et défie tes amis !
                     </p>
                 </div>
             </div>
@@ -289,9 +407,9 @@
     </main>
 
     <!-- Pied de page -->
-    <footer class="mt-10 text-center">
+    <footer class="mt-12 text-center">
         <p class="text-gray-500 text-xs sm:text-sm font-semibold tracking-wide">
-            © 2026 — Hub Arcade &middot; Prêt pour le challenge ?
+            © 2026 — Hub Arcade &middot; 6 Défis disponibles
         </p>
     </footer>
 
