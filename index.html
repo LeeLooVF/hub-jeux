@@ -85,6 +85,14 @@
             box-shadow: 0 0px 0px #27272a, 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
+        /* 7. Bar Challenge (Ambre / Doré / Cuivre) */
+        .btn-3d-barchallenge {
+            box-shadow: 0 8px 0px #78350f, 0 16px 25px rgba(0, 0, 0, 0.55);
+        }
+        .btn-3d-barchallenge:active {
+            box-shadow: 0 0px 0px #78350f, 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
         /* Drapeau Pride en dégradé franc */
         .pride-stripes {
             background: linear-gradient(to bottom, 
@@ -113,22 +121,12 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 4px 14px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 1);
         }
 
-        .rainbow-border {
-            background: linear-gradient(135deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #a855f7);
-            padding: 2px;
-        }
-
-        /* Éléments graphiques texturés */
         .letter-box {
             box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.25), 0 4px 8px rgba(0, 0, 0, 0.35);
         }
 
         .u-logo-box {
             box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.4), 0 6px 14px rgba(0, 0, 0, 0.35);
-        }
-
-        .neon-pill {
-            box-shadow: 0 0 15px rgba(217, 70, 239, 0.4);
         }
     </style>
 </head>
@@ -145,11 +143,11 @@
             Choisis ton Défi
         </h1>
         <p class="text-base sm:text-lg text-gray-400 font-medium max-w-lg mx-auto leading-relaxed">
-            6 expériences uniques à portée de clic. Sélectionne ton jeu et montre ce que tu as dans le ventre !
+            7 expériences uniques à portée de clic. Sélectionne ton jeu et montre ce que tu as dans le ventre !
         </p>
     </header>
 
-    <!-- Grille des 6 Jeux (1 col mobile, 2 cols tablette, 3 cols grand écran) -->
+    <!-- Grille des Jeux -->
     <main class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 my-auto">
         
         <!-- JEU 1 : Bitoguessr -->
@@ -387,7 +385,7 @@
                     </span>
                 </div>
 
-                <!-- Titre & Action (sans encadré, directement posé sur le fond scindé) -->
+                <!-- Titre & Action -->
                 <div class="relative z-20 w-full p-6 pt-1 flex flex-col items-center justify-center">
                     <div class="flex items-center justify-center gap-2 mb-1">
                         <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight text-shadow-strong">
@@ -404,12 +402,51 @@
             </div>
         </a>
 
+        <!-- JEU 7 : Bar Challenge -->
+        <a href="Bar_Challenge (2).html" target="_blank" rel="noopener noreferrer" 
+           class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-amber-500/40">
+            <div class="h-full bg-gradient-to-br from-amber-600 via-amber-700 to-amber-900 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-barchallenge border border-white/20 relative overflow-hidden min-h-[300px]">
+                <div class="absolute -top-10 -right-10 w-36 h-36 bg-amber-400/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-300"></div>
+
+                <div class="w-full flex justify-between items-center relative z-10 text-xs font-bold text-amber-200 uppercase tracking-wider">
+                    <span class="px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm border border-white/10">Endurance</span>
+                    <span>#07</span>
+                </div>
+
+                <div class="relative z-10 my-4 flex items-center justify-center gap-3">
+                    <span class="text-4xl sm:text-5xl transform -rotate-12 transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-0 drop-shadow-[0_8px_12px_rgba(0,0,0,0.5)]">
+                        🍺
+                    </span>
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-amber-950/60 backdrop-blur-md border border-amber-400/40 flex items-center justify-center text-3xl sm:text-4xl shadow-inner transform transition-transform duration-300 group-hover:scale-110">
+                        🍻
+                    </div>
+                    <span class="text-4xl sm:text-5xl transform rotate-12 transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-0 drop-shadow-[0_8px_12px_rgba(0,0,0,0.5)]">
+                        🥃
+                    </span>
+                </div>
+
+                <div class="relative z-10 w-full mt-2">
+                    <div class="flex items-center justify-center gap-2 mb-1.5">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-md">
+                            Bar Challenge
+                        </h2>
+                        <span class="text-amber-200 text-lg opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
+                            →
+                        </span>
+                    </div>
+                    <p class="text-amber-100/90 text-sm font-medium">
+                        Le Dernier Verre : hisse-toi dans le Top 10 !
+                    </p>
+                </div>
+            </div>
+        </a>
+
     </main>
 
     <!-- Pied de page -->
     <footer class="mt-12 text-center">
         <p class="text-gray-500 text-xs sm:text-sm font-semibold tracking-wide">
-            © 2026 — Hub Arcade &middot; 6 Défis disponibles
+            © 2026 — Hub Arcade &middot; 7 Défis disponibles
         </p>
     </footer>
 
