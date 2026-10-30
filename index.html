@@ -117,6 +117,14 @@
             box-shadow: 0 0px 0px #7f1d1d, 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
+        /* 11. Devine le Poids (Vert Citron / Émeraude) */
+        .btn-3d-poids {
+            box-shadow: 0 8px 0px #15803d, 0 16px 25px rgba(0, 0, 0, 0.5);
+        }
+        .btn-3d-poids:active {
+            box-shadow: 0 0px 0px #15803d, 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
         /* Motif Carreaux Vichy / Keffieh subtil */
         .vichy-pattern {
             background-image: 
@@ -176,7 +184,7 @@
             Choisis ton Défi
         </h1>
         <p class="text-base sm:text-lg text-gray-400 font-medium max-w-lg mx-auto leading-relaxed">
-            10 expériences uniques à portée de clic. Sélectionne ton jeu et montre ce que tu as dans le ventre !
+            11 expériences uniques à portée de clic. Sélectionne ton jeu et montre ce que tu as dans le ventre !
         </p>
     </header>
 
@@ -581,12 +589,51 @@
             </div>
         </a>
 
+        <!-- JEU 11 : Devine le Poids -->
+        <a href="https://devine-poids.pages.dev/" target="_blank" rel="noopener noreferrer" class="group block w-full outline-none transform transition-all duration-150 hover:-translate-y-1.5 active:translate-y-2 rounded-[28px] focus:ring-4 focus:ring-lime-500/40">
+            <div class="h-full bg-gradient-to-br from-lime-600 via-green-600 to-emerald-700 rounded-[28px] p-7 sm:p-8 flex flex-col items-center justify-between text-center btn-3d-poids border border-white/20 relative overflow-hidden min-h-[300px]">
+                <div class="absolute -bottom-10 -left-10 w-36 h-36 bg-lime-300/20 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-300"></div>
+
+                <div class="w-full flex justify-between items-center relative z-10 text-xs font-bold text-lime-200 uppercase tracking-wider">
+                    <span class="px-3 py-1 rounded-full bg-black/25 backdrop-blur-sm border border-white/15">Estimation</span>
+                    <span>#11</span>
+                </div>
+
+                <div class="relative z-10 my-4 flex items-center justify-center gap-3">
+                    <span class="text-4xl sm:text-5xl transform -rotate-12 transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-0 drop-shadow-[0_8px_12px_rgba(0,0,0,0.4)]">
+                        ⚖️
+                    </span>
+                    <div class="px-3.5 py-2 rounded-2xl bg-black/35 backdrop-blur-md border-2 border-lime-300/50 flex flex-col items-center justify-center shadow-inner transform transition-transform duration-300 group-hover:scale-110">
+                        <span class="text-xl sm:text-2xl font-black text-lime-300 leading-none tracking-tighter">KG</span>
+                        <span class="text-[10px] font-bold text-white/80 uppercase tracking-widest mt-0.5">±10</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl transform rotate-12 transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-0 drop-shadow-[0_8px_12px_rgba(0,0,0,0.4)]">
+                        🎯
+                    </span>
+                </div>
+
+                <div class="relative z-10 w-full mt-2">
+                    <div class="flex items-center justify-center gap-2 mb-1.5">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-md">
+                            Devine le Poids !
+                        </h2>
+                        <span class="text-lime-200 text-lg opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
+                            →
+                        </span>
+                    </div>
+                    <p class="text-lime-100/95 text-sm font-medium">
+                        As-tu le compas dans l'œil ? Estime à ± 10 kg près !
+                    </p>
+                </div>
+            </div>
+        </a>
+
     </main>
 
     <!-- Pied de page -->
     <footer class="mt-12 text-center">
         <p class="text-gray-500 text-xs sm:text-sm font-semibold tracking-wide">
-            © 2026 — Hub Arcade · 10 Défis disponibles
+            © 2026 — Hub Arcade · 11 Défis disponibles
         </p>
     </footer>
 
